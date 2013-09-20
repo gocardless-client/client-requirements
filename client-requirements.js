@@ -33,6 +33,10 @@
     },
     ObjectCreate: function ObjectCreate() {
       return 'create' in Object && _.isFunction(Object.create);
+    },
+    ElementContains: function ElementContains() {
+      return 'contains' in (Element && Element.prototype) &&
+        _.isFunction(Element.prototype.contains);
     }
   };
 
