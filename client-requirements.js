@@ -41,7 +41,7 @@
   };
 
   // Determine if requirements have been met
-  var hasRequirements = _.keys(requirements).every(function (testKey) {
+  var hasRequirements = _.every(_.keys(requirements), function (testKey) {
     var result = requirements[testKey]();
     if (!result) { console.warn(['Unsupported test:', testKey].join(' ')); }
     return result;
