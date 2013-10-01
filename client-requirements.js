@@ -28,15 +28,8 @@
     ObjectKeys: function ObjectKeys() {
       return 'keys' in Object && _.isFunction(Object.keys);
     },
-    ObjectFreeze: function ObjectFreeze() {
-      return 'freeze' in Object && _.isFunction(Object.freeze);
-    },
     ObjectCreate: function ObjectCreate() {
       return 'create' in Object && _.isFunction(Object.create);
-    },
-    ElementContains: function ElementContains() {
-      return 'contains' in (Element && Element.prototype) &&
-        _.isFunction(Element.prototype.contains);
     }
   };
 
